@@ -1,0 +1,19 @@
+{
+    "type": "mysql",
+    "host": "vvfv20el7sb2enn3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "username": "zrnrfe9zobkl0pwr",
+    "password": "tgor7glk44rmlm80",
+    "database": "rgxrisv4kau4y50h",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ]
+  }
