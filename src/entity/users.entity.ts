@@ -1,15 +1,18 @@
-import { PrimaryGeneratedColumn, Column, Entity, OneToMany } from "typeorm";
+import { PrimaryGeneratedColumn, Column, Entity, OneToMany, OneToOne, JoinColumn } from 'typeorm';
 import { UserTypes } from './userstype.entity';
 @Entity('users')
-export class Users{
+export class Users {
     @PrimaryGeneratedColumn()
-    Ids:number;
+    Ids: number;
     @Column()
-    userName:string;
+    userName: string;
     @Column()
-    email:string;
+    email: string;
     @Column()
-    passwords:string;
-    @OneToMany(type=>UserTypes,usertypes=>usertypes.users)
-    usertypes:UserTypes[]
+    passwords: string;
+    // @OneToOne(type => UserTypes)
+    // @JoinColumn()
+    // usertypes: UserTypes;
+     @OneToMany(type => UserTypes, usertypes => usertypes.users, { eager: true, cascade: true })
+     usertypes: UserTypes[]
 }
