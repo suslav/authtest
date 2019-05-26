@@ -13,6 +13,7 @@ export class UsersService {
 
         const users = await this.usertypestab.find({ relations: ['users'] });
         return users;
+        
     }
 
 }
